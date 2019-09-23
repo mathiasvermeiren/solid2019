@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model  CheckIn
+
+<div class="text-left">
+    <form asp-controller="Home" asp-action="SubmitCheckIn" method="post">
+        <h2 class="display-4">Check in form</h2>
+        <div class="form-group">
+            <label asp-for="Quarter">Quarter:</label>
+            <input class="form-control" asp-for="Quarter" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ProjectUpdate">Update project:</label>
+            <textarea class="form-control" asp-for="ProjectUpdate" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <label asp-for="GoalsUpdate">Update goals:</label>
+            <textarea class="form-control" asp-for="GoalsUpdate" rows="4"></textarea>
+        </div>
+        <button type="submit">Check in</button>
+    </form>
+</div>
